@@ -1,0 +1,28 @@
+@model ColorInterpolation
+
+<h2>Color Interpolator</h2>
+
+<form method="post" asp-action="ColorInterpolator">
+    <label>Start Color:</label>
+    <input type="color" asp-for="StartColor" required />
+
+    <label>End Color:</label>
+    <input type="color" asp-for="EndColor" required />
+
+    <label>Steps:</label>
+    <input type="number" asp-for="Steps" min="2" required />
+
+    <button type="submit">Generate</button>
+</form>
+
+@if (Model.Colors.Any())
+{
+    <table>
+        @foreach (var color in Model.Colors)
+        {
+            <tr style="background-color:@color;">
+                <td>@color</td>
+            </tr>
+        }
+    </table>
+}
