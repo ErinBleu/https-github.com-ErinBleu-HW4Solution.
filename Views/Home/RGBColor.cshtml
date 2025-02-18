@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "RGB Color Display";
+}
+
+<h2>RGB Color Display</h2>
+
+<form method="get" asp-action="RGBColor">
+    <label for="red">Red (0-255):</label>
+    <input type="number" name="red" min="0" max="255" value="@ViewData["Red"]" required />
+
+    <label for="green">Green (0-255):</label>
+    <input type="number" name="green" min="0" max="255" value="@ViewData["Green"]" required />
+
+    <label for="blue">Blue (0-255):</label>
+    <input type="number" name="blue" min="0" max="255" value="@ViewData["Blue"]" required />
+
+    <button type="submit">Display</button>
+</form>
+
+@if (ViewData["HexColor"] != null)
+{
+    <div style="width: 100px; height: 100px; background-color: @ViewData["HexColor"];">
+    </div>
+    <p>Hex Code: @ViewData["HexColor"]</p>
+}

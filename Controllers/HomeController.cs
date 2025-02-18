@@ -6,26 +6,21 @@ namespace HW4Project.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    [HttpGet]
+    public IActionResult RGBColor(int? red, int? green, int? blue)
     {
-        _logger = logger;
-    }
+        // Default color if values are missing
+        red ??= 0;
+        green ??= 0;
+        blue ??= 0;
 
-    public IActionResult Index()
-    {
+        string hexColor = $"#{red:X2}{green:X2}{blue:X2}";
+
+        ViewData["HexColor"] = hexColor;
+        ViewData["Red"] = red;
+        ViewData["Green"] = green;
+        ViewData["Blue"] = blue;
+
         return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
