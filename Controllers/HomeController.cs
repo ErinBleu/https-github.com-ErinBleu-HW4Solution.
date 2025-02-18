@@ -24,3 +24,9 @@ public class HomeController : Controller
         return View();
     }
 }
+[HttpPost]
+public IActionResult ColorInterpolator(ColorInterpolation model)
+{
+    model.GenerateColors();
+    return View(model);
+}
