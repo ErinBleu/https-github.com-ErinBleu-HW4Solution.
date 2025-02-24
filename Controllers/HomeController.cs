@@ -23,10 +23,36 @@ public class HomeController : Controller
 
         return View();
     }
-}
-[HttpPost]
-public IActionResult ColorInterpolator(ColorInterpolation model)
-{
-    model.GenerateColors();
-    return View(model);
+
+    [HttpGet]
+    public IActionResult ColorInterpolator(ColorInterpolation colorInt)
+    {
+        return View("ColorInterpolator", colorInt);
+    }
+
+    [HttpPost]
+    public IActionResult ColorInterpolator()
+    {
+        ColorInterpolation colorInt = new();
+
+        colorInt.GenerateColors();
+
+        return View("ColorInterpolator", colorInt);
+    }
+
+   /* [HttpGet] // ✅ This must be inside the class
+    public IActionResult ColorInterpolator()
+    {
+        
+        return View();
+    }*/
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+    public IActionResult Privacy()
+    {
+        return View();
+    }
 }

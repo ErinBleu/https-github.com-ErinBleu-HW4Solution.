@@ -14,6 +14,7 @@ C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\
 C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\HW4Project.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\HW4Project.RazorAssemblyInfo.cache
 C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\HW4Project.RazorAssemblyInfo.cs
+C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\HW4Project.sourcelink.json
 C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ander\OneDrive\Documents\CS366\HW4Solution\HW4Project\obj\Debug\net8.0\staticwebassets\msbuild.HW4Project.Microsoft.AspNetCore.StaticWebAssets.props
